@@ -1,0 +1,32 @@
+version: '2'
+services:
+  web:
+    image: node
+    command: npm run dev
+    working_dir: /app
+    ports:
+    - 8080:8080
+    volumes:
+      - ./:/app
+      - node_modules:/app/node_modules
+  test:
+    image: yurifl/node
+    command: npm test
+    working_dir: /app
+    ports:
+    - 9876:9876
+    volumes:
+      - ./:/app
+      - node_modules:/app/node_modules
+  coverage:
+    image: python:alpine
+    ports:
+      - 9877:80
+    working_dir: /app
+    command: python3 -m http.server 80
+    volumes:
+      - ./test/unit/coverage/lcov-report/:/app
+
+volumes:
+  node_modules:
+    external: true
