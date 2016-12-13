@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/yurifrl/notify-frontend.svg?branch=master)](https://travis-ci.org/yurifrl/notify-frontend)
 # example
 
 > Notification show case
