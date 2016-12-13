@@ -10,7 +10,8 @@
     "unit": "karma start test/unit/karma.conf.js",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "karma": "karma start --single-run --browsers PhantomJS"
   },
   "dependencies": {
     "vue": "^2.1.0"
