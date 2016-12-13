@@ -12,8 +12,8 @@ const vmBuilder = Vue => components => propsData => {
 
 const getVm = vmBuilder(Vue)({ notify: Notify })
 
-describe('Notify.vue elements structure', () => {
-  it('should render correct contents', () => {
+describe('Notify.vue structure', () => {
+  it('should render properly', () => {
     const notes = [
       {
         header: 'Header lorem',
@@ -51,5 +51,26 @@ describe('Notify.vue elements structure', () => {
       expect(vm.$el.querySelector('.notifications .info h3')).to.equal(null)
       done()
     }, 1000)
+  })
+
+  it('should delete a element from a list', () => {
+    const notes = [
+      {
+        header: 'header1',
+        body: 'body1',
+        level: 'error',
+        duration: 1
+      },
+      {
+        header: 'header2',
+        body: 'body2',
+        level: 'error'
+      }
+    ]
+    const expectations = ['header2']
+    const vm = getVm({notes: notes}).$mount()
+    console.log(vm.$el.querySelector('.notifications .close').click())
+
+    // expect(vm.$data.notes.map(x => x.header)).to.equal(expectations)
   })
 })

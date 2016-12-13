@@ -25,6 +25,6 @@ describe('App.vue', () => {
       level: 'warning'
     }
     const vm = getVm(props).$mount()
-    console.log(vm.$el)
+    // console.log(vm.$data)
   })
 })
