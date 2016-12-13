@@ -33,20 +33,11 @@ docker volume create --name=node_modules
 # install dependencies
 docker-compose run --rm web npm install
 
-# serve with hot reload at localhost:8080
-docker-compose run --rm web npm run dev
-
-# build for production with minification
-docker-compose run --rm web npm run build
-
-# run unit tests
-docker-compose run --rm web npm run unit
-
-# run e2e tests
-docker-compose run --rm web npm run e2e
-
-# run all tests
-docker-compose run --rm web npm test
+# start everything
+# 127.0.0.1:8080 -> example page
+# 127.0.0.1:9876 -> karma
+# 127.0.0.1:9877 -> coverege
+docker-compose -f docker-compose.test.yml up
 ```
 
 ## Build to production
