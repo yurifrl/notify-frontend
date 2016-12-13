@@ -4,7 +4,7 @@ import Notify from 'src/components/Notify.vue'
 // helper function that mounts and returns the rendered text
 const vmBuilder = Vue => components => propsData => {
   return new Vue({
-    template: '<div><notify :notes="notes" baseMultiplier="0"></notify></div>',
+    template: '<div><notify :notes="notes" :baseMultiplier=0></notify></div>',
     data: function () { return propsData },
     components: components
   })
