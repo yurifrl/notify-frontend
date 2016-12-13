@@ -89,3 +89,8 @@ export default {
 </script>
 ```html
 
+
+## More
+This is part 1 of 3 projects, check it out
+- https://github.com/yurifrl/notify
+- https://github.com/yurifrl/fragments
