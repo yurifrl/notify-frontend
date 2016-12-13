@@ -1,4 +1,4 @@
-[logo]: https://github.com/yurifrl/notify-frontend/raw/master/src/assets/image.png "What a lovely application"
+<img src="https://github.com/yurifrl/notify-frontend/raw/master/src/assets/image.png">
 
 [![Build Status](https://travis-ci.org/yurifrl/notify-frontend.svg?branch=master)](https://travis-ci.org/yurifrl/notify-frontend)
 # example
